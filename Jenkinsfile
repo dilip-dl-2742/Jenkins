@@ -2,24 +2,20 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Code Checkout') {
             steps {
-                echo 'Hello World from Jenkins'
+                echo 'Initializing the Pipeline'
             }
         }
-        stage('Webhook') {
+        stage('Docker Login') {
             steps {
-                echo 'Testing the webhook with GitHub'
-            }
-        }
-        stage('Testing') {
-            steps {
-                echo 'Testing the Webhook in Jenkins Pipeline'
+                sh 'docker login -u ddoddi27'
+                sh ${ddoddi27}
             }
         }
         stage('Build Success') {
             steps {
-                echo 'Build Successfull and Webhook is on the way'
+                echo 'Build Successfull'
             }
         }
     }
