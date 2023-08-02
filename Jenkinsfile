@@ -6,6 +6,7 @@ pipeline {
         stage('Code Checkout') {
             steps {
                 echo 'Initializing the Pipeline'
+                echo '${ddoddi27}'
             }
         }
         stage('Docker Running Tomcat') {
