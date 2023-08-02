@@ -9,8 +9,10 @@ pipeline {
         }
         stage('Docker Login') {
             steps {
-                sh 'docker login -u ddoddi27'
-                sh "${ddoddi27}"
+                //sh 'docker login -u ddoddi27'
+                //sh "${ddoddi27}"
+                sh 'docker run -d --name httpd-jenkins -p 8042:80 httpd:latest'
+                sh 'docker ps'
             }
         }
         stage('Build Success') {
