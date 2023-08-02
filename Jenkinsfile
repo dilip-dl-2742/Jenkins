@@ -10,7 +10,7 @@ pipeline {
         stage('Docker Login') {
             steps {
                 sh 'docker login -u ddoddi27'
-                sh ${ddoddi27}
+                sh "${ddoddi27}"
             }
         }
         stage('Build Success') {
