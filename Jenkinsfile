@@ -17,5 +17,10 @@ pipeline {
                 echo 'Testing the Webhook in Jenkins Pipeline'
             }
         }
+        stage('Build Success') {
+            steps {
+                echo 'Build Successfull and Webhook is on the way'
+            }
+        }
     }
 }
