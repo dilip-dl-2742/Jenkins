@@ -1,6 +1,6 @@
 @Library('my-shared-library@e9da5e66e965d8bc1d473d9febf8b0a129822226') _
 pipeline {
-    agent any
+    //agent any
 
     stages {
         stage('Code Checkout') {
