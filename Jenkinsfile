@@ -1,4 +1,4 @@
-@Library('my-shared-library') _
+@Library('my-shared-library')_
 pipeline {
     agent any
 
@@ -11,7 +11,9 @@ pipeline {
         }
         stage('Docker Running Tomcat') {
             steps {
+                script{
                 sharedLib()
+                }
                 //sh 'docker login -u ddoddi27'
                 //sh "echo ${ddoddi27}"
                 //sh 'docker run -d --name httpd-jenkins -p 8042:80 httpd:latest'
