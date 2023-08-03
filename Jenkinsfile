@@ -12,7 +12,7 @@ pipeline {
         stage('Docker Running Tomcat') {
             steps {
                 script{
-                sharedLib()
+                httpd()
                 }
                 //sh 'docker login -u ddoddi27'
                 //sh "echo ${ddoddi27}" 
