@@ -6,7 +6,7 @@ pipeline {
         stage('Code Checkout') {
             steps {
                 echo 'Initializing the Pipeline'
-                echo '${DOCEKR_USERNAME}'
+                echo '${DOCKER_USERNAME}'
             }
         }
         stage('Docker Running Tomcat') {
